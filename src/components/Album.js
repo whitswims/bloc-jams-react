@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
 import albumData from './../data/albums';
 
 
@@ -9,12 +8,14 @@ class Album extends Component {
 
     const album = albumData.find( album => {
       return album.slug === this.props.match.params.slug
-    });
+    }); 
 
     this.state = {
       album: album,
       currentSong: album.songs[0],
-      isPlaying: false
+      isPlaying: false,
+      hover: false,
+      toSHow: "show"
     };
 
     this.audioElement = document.createElement('audio');
@@ -45,6 +46,36 @@ class Album extends Component {
       this.play();
     }
   }
+  onMouseEnterHandler(song){
+    const isSameSong = this.state.currentSong === song;
+      this.setState({hover:true});
+      if (this.state.hover === true && isSameSong) {
+      this.displayButton(song); 
+    } else {
+      if(!isSameSong) {
+      this.setSong(song)
+      this.displayButton(song); 
+    }
+  }
+      this.setState({toShow:"hide"})
+  }   
+  
+  onMouseLeaveHandler(song) {
+      this.setState({hover:false});
+      this.setState({toShow:""});
+  }
+  displayButton(song) {
+    const isSameSong =this.state.currentSong === song;
+      if (this.state.hover === true && isSameSong) {
+          if (this.state.isPlaying) { 
+         return "icon ion-md-pause";
+        } else if (!this.state.isPlaying) {
+        return "icon ion-md-play";
+         }
+        } 
+     }
+
+
 
   render() {
     return (
@@ -67,7 +98,7 @@ class Album extends Component {
           {
             this.state.album.songs.map( (song, index) =>
               <tr className="song" key={index} onClick={() => this.handleSongClick(song)}>
-                <td>{index + 1}. </td>
+                <td className={this.displayButton(song)} onMouseOver={this.onMouseEnterHandler.bind(this, song)} onMouseLeave={this.onMouseLeaveHandler.bind(this, song)}><span className={this.state.toShow}>{index + 1}.</span></td>
                 <td>{song.title}</td>
                 <td>{song.duration}</td>
               </tr>
