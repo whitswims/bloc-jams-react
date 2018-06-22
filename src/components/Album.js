@@ -98,7 +98,7 @@ class Album extends Component {
           {
             this.state.album.songs.map( (song, index) =>
               <tr className="song" key={index} onClick={() => this.handleSongClick(song)}>
-                <td className={this.displayButton(song)} onMouseOver={this.onMouseEnterHandler.bind(this, song)} onMouseLeave={this.onMouseLeaveHandler.bind(this, song)}><span className={this.state.toShow}>{index + 1}.</span></td>
+                <td className={this.displayButton(song)} onMouseEnter={this.onMouseEnterHandler.bind(this, song)} onMouseLeave={this.onMouseLeaveHandler.bind(this, song)}><span className={this.state.toShow}>{index + 1}.</span></td>
                 <td>{song.title}</td>
                 <td>{song.duration}</td>
               </tr>
