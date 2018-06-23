@@ -14,6 +14,7 @@ class Album extends Component {
     this.state = {
       album: album,
       currentSong: album.songs[0],
+      albumLength: album.songs.length,
       isPlaying: false,
       hover: false,
       toSHow: "show"
@@ -55,6 +56,20 @@ class Album extends Component {
     this.setSong(newSong);
     this.play();
   }
+
+  handleNextClick() {
+      const currentIndex = this.state.album.songs.findIndex(song => this.state.currentSong === song);
+      const newIndex = Math.min(this.state.albumLength, currentIndex +1);
+      if (newIndex === this.state.albumLength || newIndex > this.state.albumLength){
+        const newSong = this.state.album.songs[0];
+        this.setSong(newSong);
+        this.play();
+      }else {
+        const newSong = this.state.album.songs[newIndex];
+        this.setSong(newSong);
+        this.play();
+      }
+    }
 
   onMouseEnterHandler(song){
     const isSameSong = this.state.currentSong === song;
@@ -120,7 +135,8 @@ class Album extends Component {
           isPlaying={this.state.isPlaying} 
           currentSong={this.state.currentSong} 
           handleSongClick={()=> this.handleSongClick(this.state.currentSong)}
-          handlePrevClick={() => this.handlePrevClick()}
+          handlePrevClick={()=> this.handlePrevClick(this.state.currentSong)}
+          handleNextClick={()=> this.handleNextClick(this.state.currentSong)}
         />
       </section>
     );
