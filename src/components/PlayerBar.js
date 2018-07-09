@@ -1,12 +1,17 @@
 import React, { Component } from 'react';
+import { Button, Glyphicon } from 'react-bootstrap';
 
 class PlayerBar extends Component {
 
   buttonSwitcher (song){
     if (this.props.Playing) {
-      return "icon ion-md-pause";
+      return <Button bsStyle="btn btn-lg btn-primary active">
+      <Glyphicon glyph="glyphicon glyphicon-pause" />
+    </Button>;
     } else {
-      return "icon ion-md-play"
+      return <Button bsStyle="btn btn-lg btn-primary active">
+      <Glyphicon glyph="glyphicon glyphicon-play" />
+    </Button>
     }
   }
 
@@ -14,16 +19,19 @@ class PlayerBar extends Component {
         return (
             <section className="player-bar">
               <section id="buttons">
-                <button id="previous" onClick={this.props.handlePrevClick}>
-                  <span className="icon ion-md-skip-backward"></span>
-                  </button>
-                <button id="play-pause" onClick={this.props.handleSongClick} >
-                  <span className= {this.props.isPlaying ? "icon ion-md-pause" : "icon ion-md-play"}></span>
-                </button>
-                <button id="next" onClick={this.props.handleNextClick}>
-                  <span className="icon ion-md-skip-forward"></span>
-                </button>
+                  <span className=""><Button id="previous" onClick={this.props.handlePrevClick} bsStyle="btn btn-lg btn-primary active">
+          <Glyphicon glyph="glyphicon glyphicon-chevron-left" />
+        </Button></span>
+                  <span className=""> {this.props.isPlaying ? <Button id="play-pause" onClick={this.props.handleSongClick} bsStyle="btn btn-lg btn-primary active">
+          <Glyphicon glyph="glyphicon glyphicon-pause" />
+        </Button> : <Button id="play-pause" onClick={this.props.handleSongClick} bsStyle="btn btn-lg btn-primary active">
+          <Glyphicon glyph="glyphicon glyphicon-play" />
+        </Button>}</span>
+                <Button id="next" onClick={this.props.handleNextClick} bsStyle="btn btn-lg btn-primary active">
+          <Glyphicon glyph="glyphicon glyphicon-chevron-right" />
+        </Button>
               </section>
+              <section className="controls">
               <section id="time-control">
               <div className="current-time">{this.props.formattedCurrentTime}</div>
               <input 
@@ -49,6 +57,7 @@ class PlayerBar extends Component {
                 onChange={this.props.handleVolumeChange}
                 />
                 <div className="icon ion-md-volume-high"></div>
+              </section>
               </section>
             </section>
         );

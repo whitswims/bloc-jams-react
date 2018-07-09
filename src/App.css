@@ -1,5 +1,5 @@
 .App {
-  text-align: center;
+  height: 100%;
 }
 
 .App-logo {
@@ -9,9 +9,9 @@
 
 .App-header {
   background-color: #222;
+  color: white;
   height: 150px;
   padding: 20px;
-  color: white;
 }
 
 .App-title {
@@ -27,7 +27,421 @@
   to { transform: rotate(360deg); }
 }
 
+.album-cover {
+  align-items: flex-end;
+  margin-top: auto;
+}
+
+#album-cover-art {
+  align-items: flex-end;
+  border-radius: 25px;
+  box-shadow: 5px 5px 2px grey;
+  display: flex;
+  margin-top: 25px;
+  width: 100%;
+}
+
+.album-details {
+  background-color: rgba(5,4,2,0.1);
+  border-bottom-color: white;
+  border-radius: 25px 25px 0px 0px;
+  box-shadow: 5px 0px 0px grey;
+  color: black;
+  margin-top: 30px;  
+  /* padding: 20px;*/
+  padding-top: 10px; 
+}
+
+.album-display {
+  align-content:center;
+  height: 100%;
+  margin:0;
+  padding-top: 10%;
+  width:100%;
+}
+
+.album-info {
+  display: flex;
+  flex-direction: column;
+  padding-top: auto;
+  text-align: center;
+  width:100%;
+}
+
+#album-name {
+  font-size: 28px;
+  text-shadow: 1px 1px 2px black, 0 0 7px black, 0 0 5px rgb(12, 12, 241);
+}
+
+#album-title {
+  color: white;
+  margin: 0px;
+  padding: 0px;
+  text-align: center;
+  text-shadow: 1px 1px 2px black, 0 0 7px black, 0 0 5px rgb(12, 12, 241);
+}
+
+#artist-name {
+  font-size: 20px;
+  text-shadow: 1px 1px 2px black, 0 0 7px black, 0 0 5px rgb(12, 12, 241);
+}
+
+.artist-info {
+  margin-top: 100px;;
+}
+
+#benefits {
+  display:flex;
+  justify-content: center;
+}
+
+body {
+  background: linear-gradient(45deg, rgb(93, 93, 95), rgb(127, 129, 127)) ;
+  min-height: 100%;
+}
+
+.btn-group-lg>.btn, .btn-lg {
+  padding: 5px;
+}
+
+.btn-primary {
+  background-color: rgb(16, 63, 156);
+  border-color: rgb(118, 120, 124);
+  color: white;
+  text-shadow: 1px 1px 2px black, 0 0 7px black, 0 0 5px rgb(12, 12, 241);
+
+}
+
+.btn-primary:hover {
+  background-color: red;
+  color: white;
+}
+
+.btn-primary.active {
+  background-color: rgb(118, 120, 124);
+  border-color: rgb(177, 172, 172);
+  color:white;
+}
+
+.btn-primary.active:hover {
+  background-color: rgb(118, 120, 124);
+  border-color: white;
+  color: white;
+}
+
+.btn-primary:hover {
+  background-color: white;
+  color: blue;
+}
+
+#buttons {
+  border-radius: 25px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+#buttons #next {
+  margin: 10px;
+  padding: 10px;
+}
+
+#buttons #play-pause {
+  margin:10px;
+  padding: 10px;
+}
+
+#buttons #previous {
+  margin:10px;
+  padding: 10px;
+}
+
+.container {
+  height: 100%;
+  padding: 0;
+}
+
+.controls {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.current-time {
+  color:white;
+  padding: 15px;
+}
+
+.footer {
+  background: rgba(255,255,255, .3);
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+}
+
+header h1 {
+  color: white;
+  font-size: 58px;
+  text-align: center;
+  text-shadow: 1px 1px 2px rgb(16, 63, 156), 0 0 25px rgb(80, 80, 82), 2px 2px 5px rgb(100, 100, 104);
+}
+
+.hero-title {
+  color:black;
+  font-size: 62px;
+  text-shadow: 1px 1px 2px black, 0 0 25px rgb(80, 80, 82), 0 0 5px white;
+}
+
 .hide {
   display: none;
 }
+
+html {
+  background: rgba(255,255,255, .3);
+  height: 100%;
+}
+
+.ion-md-volume-low {
+  color:white;
+  padding: 10px;
+}
+.ion-md-volume-high {
+  color:white;
+  padding: 10px;
+}
+
+img {
+  min-height: 570px;
+  vertical-align: bottom;
+  width: 100%;
+}
+
+.landing {
+  display: flex;
+  flex-direction: column;
+  padding: auto;
+}
+
+.landing h1 {
+  text-align: center;
+}
+
+.library {
+  align-content:center;
+  color: white;
+  height: 100%;
+  justify-content: center;
+  margin:0;
+  padding-top: 15%;
+  text-align: center;
+  width:100%;
+}
+
+.library .image0  {
+  margin: auto;
+  margin-bottom: 25px;
+  width: 100%;
+}
+
+.library .image1 {
+  margin: auto;
+  margin-bottom: 25px;
+  width: 100%;
+} 
+
+.library a {
+  color:white;
+  text-decoration: none;
+  text-shadow: 1px 1px 2px rgb(16, 63, 156), 0 0 25px rgb(80, 80, 82), 2px 2px 5px rgb(100, 100, 104);
+
+}
+
+.library img {
+  border-radius: 25px;
+  box-shadow: 5px 5px 2px grey;
+  display: flex;
+  flex-direction: column;
+  flex-wrap:wrap;
+  padding-top: auto;
+  width: 100%;
+}
+
+.logo {
+  background: rgba(5,4,2,0.1);
+  border-radius: 25px;
+  box-shadow: 7px 7px 3px grey;
+  padding: 25px;
+  width: 25%;
+}
+
+.navArea {
+  text-align: center;
+}
+
+nav a{
+  color: white;
+  text-decoration: none;
+  text-shadow: 1px 1px 2px rgb(16, 63, 156), 0 0 25px rgb(80, 80, 82), 2px 2px 5px rgb(100, 100, 104);
+
+}
+
+.player-bar {
+  background: rgba(5,4,2,0.1);
+  border-radius: 25px;
+  margin-bottom: 100px;
+  margin-top: 28px;
+  box-shadow: 5px 5px 2px grey;
+  width: 100%;
+}
+
+.player-selection {
+  display: flex;
+  flex-direction: column;
+  justify-content:center;
+  width: 100%;
+}
+
+.player-table {
+  background: rgba(5,4,2,0.1);
+  border-radius: 0px 0px 25px 25px;
+  box-shadow: 5px 5px 2px grey;
+  margin: auto;
+  padding-bottom: 20px;
+  padding-top: 20px;
+  width: 100%;
+}
+
+.point-description {
+  color:white;
+  padding-bottom: 100px;
+}
+
+.point-title {
+  font-size: 38px;
+}
+
+#release-info {
+  color: white;
+  text-align: center;
+  text-shadow: 1px 1px 2px rgb(16, 63, 156), 0 0 25px rgb(80, 80, 82), 2px 2px 5px rgb(100, 100, 104);
+
+}
+
+.row {
+  height: 100%;
+}
+
+.selling-points {
+
+  color: black;
+  padding-bottom: 20%;
+  text-shadow: 1px 1px 2px black, 0 0 25px white, 0 0 5px rgb(100, 100, 104);
+  text-align: center;
+}
+
+#song-list {
+  margin: auto;
+}
+
+.song-selection {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+}
+
+table {
+  border-collapse:collapse;
+  border-radius: 25px;
+  box-shadow: 0 0 0 1px gray;
+  margin-bottom: 25px;
+  width: 100%;
+}
+
+table .ion-md-play {
+  height: 50px;
+}
+
+td {
+  color: white;
+  height: 40px;
+  text-shadow: 1px 1px 2px black, 0 0 5px white, 0 0 5px rgb(12, 12, 241);
+}
+
+td:nth-child(1) {
+  text-align: center;
+}
+
+td:nth-child(2) {
+  min-width: 100px;
+  padding-left: 15px;
+}
+
+td:nth-child(3) {
+  min-width: 100px;
+  padding-right: 15px;
+  text-align: right;
+}
+
+.thumbnail {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 70%;
+}
+
+thumbnail img {
+  align-content: center;
+  display: flex;
+}
+
+#time-control {
+  align-items: center;
+  border: 1px gray inset;
+  border-radius: 30px;
+  box-shadow: 2px 2px 1px gray inset;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin: 10px;
+  min-width: 75%;
+}
+
+.total-time {
+  color:white;
+  padding: 15px;
+}
+
+tr {
+  border-radius: 25px;
+  position: relative;
+}
+
+tr:nth-child(even){
+  background-color:rgba(16, 63, 156, 0.15); 
+}
+
+tr:nth-child(odd){
+  background-color: rgba(89, 90, 94, 0.15);
+}
+
+#volume-control {
+  border: 1px gray inset;
+  border-radius: 30px;
+  box-shadow: 2px 2px 1px gray inset;
+  display: flex;
+  flex-direction: row;
+  margin:auto;
+  margin-top: 25px;
+  margin-bottom: 12px;
+  max-width:50%;
+}
+
+
+
+
+
+
+
 
