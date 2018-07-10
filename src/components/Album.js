@@ -150,17 +150,17 @@ class Album extends Component {
     const isSameSong =this.state.currentSong === song;
       if (isSameSong) {
         if (this.state.isPlaying) {   
-          return <Button bsStyle="btn btn-md btn-primary active">
+          return <Button /* bsStyle="btn btn-md btn-primary active" */>
                   <Glyphicon glyph="glyphicon glyphicon-pause" />
                  </Button>;
         } else if (!this.state.isPlaying) {   
-          return <Button bsStyle="btn btn-md btn-primary inactive">
+          return <Button /* bsStyle="btn btn-md btn-primary" */>
                   <Glyphicon glyph="glyphicon glyphicon-play" />
                  </Button>;
         }
       }
       else if (this.state.hover === true && this.state.hoverSong === song){
-        return <Button bsStyle="btn btn-md btn-primary active">
+        return <Button /* bsStyle="btn btn-md btn-primary active" */>
                 <Glyphicon glyph="glyphicon glyphicon-play" />
                </Button>;
       }

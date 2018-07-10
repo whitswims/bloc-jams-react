@@ -11,7 +11,7 @@ class App extends Component {
       <div className="App">
         <header>
           <nav>
-          <ul class="nav nav-pills">
+          <ul className="nav nav-pills">
   <li role="presentation"><Link to='/'>Landing</Link></li>
   <li role="presentation"><Link to='/library'>Library</Link></li>
 </ul>

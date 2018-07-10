@@ -19,15 +19,15 @@ class PlayerBar extends Component {
         return (
             <section className="player-bar">
               <section id="buttons">
-                  <span className=""><Button id="previous" onClick={this.props.handlePrevClick} bsStyle="btn btn-lg btn-primary active">
+                  <span className=""><Button id="previous" onClick={this.props.handlePrevClick} /* bsStyle="btn btn-lg btn-primary active" */>
           <Glyphicon glyph="glyphicon glyphicon-chevron-left" />
         </Button></span>
-                  <span className=""> {this.props.isPlaying ? <Button id="play-pause" onClick={this.props.handleSongClick} bsStyle="btn btn-lg btn-primary active">
+                  <span className=""> {this.props.isPlaying ? <Button id="play-pause" onClick={this.props.handleSongClick} /* bsStyle="btn btn-lg btn-primary active" */>
           <Glyphicon glyph="glyphicon glyphicon-pause" />
-        </Button> : <Button id="play-pause" onClick={this.props.handleSongClick} bsStyle="btn btn-lg btn-primary active">
+        </Button> : <Button id="play-pause" onClick={this.props.handleSongClick} /* bsStyle="btn btn-lg btn-primary active" */>
           <Glyphicon glyph="glyphicon glyphicon-play" />
         </Button>}</span>
-                <Button id="next" onClick={this.props.handleNextClick} bsStyle="btn btn-lg btn-primary active">
+                <Button id="next" onClick={this.props.handleNextClick} /* bsStyle="btn btn-lg btn-primary active" */>
           <Glyphicon glyph="glyphicon glyphicon-chevron-right" />
         </Button>
               </section>
